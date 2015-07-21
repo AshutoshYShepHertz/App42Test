@@ -19,7 +19,7 @@ public class JunitSeleniumTest {
     @Test
     public void myTest() throws Exception {
     	String sysEnvStr = System.getenv("JAVA_HOME");
-    	String sysEnvStr1 = System.getenv("Jmeter");
+    	String sysEnvStr1 = System.getenv("JMeter");
     	System.out.println("Selenium Test Successfull"+sysEnvStr+"heheheh"+sysEnvStr1);
         WebDriver driver = new RemoteWebDriver(
                                 new URL("http://92.246.242.230/wd/hub/"), 
