@@ -15,7 +15,7 @@ import org.openqa.selenium.remote.Augmenter;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
-public class JunitFirstTest {
+public class JunitSeleniumTest {
     @Test
     public void myTest() throws Exception {
         WebDriver driver = new RemoteWebDriver(
@@ -23,8 +23,7 @@ public class JunitFirstTest {
                                 DesiredCapabilities.firefox());
         
         driver.get("http://www.google.com");
-    
-        System.out.println(driver.getTitle());
+       
         
         // RemoteWebDriver does not implement the TakesScreenshot class
         // if the driver does have the Capabilities to take a screenshot
@@ -34,6 +33,7 @@ public class JunitFirstTest {
                             getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(screenshot, new File("D:\\screenshot.png"));
         Assert.assertEquals(driver.getTitle(), "Google");
+		System.out.println(Selenium Test Successfull);
         
     }
 	@Test
