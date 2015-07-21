@@ -32,7 +32,7 @@ public class JunitSeleniumTest {
 
     	
     	WebDriver driver = new RemoteWebDriver(
-                                new URL("http://92.246.242.230/wd/hub/"), 
+                                new URL("http://app42seleniumipaddress/wd/hub/"), 
                                 DesiredCapabilities.firefox());
         
         driver.get("http://www.google.com");
