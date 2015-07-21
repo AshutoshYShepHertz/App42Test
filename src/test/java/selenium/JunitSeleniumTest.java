@@ -33,7 +33,7 @@ public class JunitSeleniumTest {
                             getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(screenshot, new File("D:\\screenshot.png"));
         Assert.assertEquals(driver.getTitle(), "Google");
-		System.out.println(Selenium Test Successfull);
+		System.out.println("Selenium Test Successfull");
         
     }
 	@Test
