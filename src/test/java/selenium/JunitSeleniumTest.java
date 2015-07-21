@@ -18,6 +18,9 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 public class JunitSeleniumTest {
     @Test
     public void myTest() throws Exception {
+    	String sysEnvStr = System.getenv("JAVA_HOME");
+    	String sysEnvStr1 = System.getenv("Jmeter");
+    	System.out.println("Selenium Test Successfull"+sysEnvStr+"heheheh"+sysEnvStr1);
         WebDriver driver = new RemoteWebDriver(
                                 new URL("http://92.246.242.230/wd/hub/"), 
                                 DesiredCapabilities.firefox());
@@ -31,7 +34,7 @@ public class JunitSeleniumTest {
         WebDriver augmentedDriver = new Augmenter().augment(driver);
         File screenshot = ((TakesScreenshot)augmentedDriver).
                             getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(screenshot, new File("D:\\screenshot.png"));
+        FileUtils.copyFile(screenshot, new File("/home/paasadmin/testimage.png"));
         Assert.assertEquals(driver.getTitle(), "Google");
 		System.out.println("Selenium Test Successfull");
         
