@@ -2,6 +2,7 @@ package selenium;
 
 import java.io.File;
 import java.net.URL;
+import java.util.Map;
 
 import junit.framework.Assert;
 
@@ -20,8 +21,17 @@ public class JunitSeleniumTest {
     public void myTest() throws Exception {
     	String sysEnvStr = System.getenv("JAVA_HOME");
     	String sysEnvStr1 = System.getenv("PATH");
+    	
     	System.out.println("Selenium Test Successfull"+sysEnvStr+"heheheh"+sysEnvStr1);
-        WebDriver driver = new RemoteWebDriver(
+        
+    	Map<String, String> env = System.getenv();
+        for (String envName : env.keySet()) {
+            System.out.format("%s=%s%n", envName, env.get(envName));
+        }
+
+
+    	
+    	WebDriver driver = new RemoteWebDriver(
                                 new URL("http://92.246.242.230/wd/hub/"), 
                                 DesiredCapabilities.firefox());
         
