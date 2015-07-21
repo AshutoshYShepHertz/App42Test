@@ -19,17 +19,6 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 public class JunitSeleniumTest {
     @Test
     public void myTest() throws Exception {
-    	String sysEnvStr = System.getenv("JAVA_HOME");
-    	String sysEnvStr1 = System.getenv("PATH");
-    	
-    	System.out.println("Selenium Test Successfull"+sysEnvStr+"heheheh"+sysEnvStr1);
-        
-    	Map<String, String> env = System.getenv();
-        for (String envName : env.keySet()) {
-            System.out.format("%s=%s%n", envName, env.get(envName));
-        }
-
-
     	
     	WebDriver driver = new RemoteWebDriver(
                                 new URL("http://app42seleniumipaddress/wd/hub/"), 
